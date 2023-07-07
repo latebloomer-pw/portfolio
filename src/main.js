@@ -12,7 +12,7 @@ window.addEventListener('resize', () => {
 
 gsap.registerPlugin(ScrollTrigger) // GSAP SETUP
 // LENIS SETUP
-const lenis = new Lenis({ lerp: 0.05 })
+const lenis = new Lenis()
 function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
@@ -22,19 +22,6 @@ requestAnimationFrame(raf)
 gsap.ticker.add((time) => {
   lenis.raf(time * 1000)
 })
-// ===============
 
-// GSAP ANIMATIONS
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: 'html',
-      start: 'top top-=100',
-      scrub: true,
-    },
-  })
-  .from('body', {
-    color: 'red',
-  })
 // ===============
 console.log($('body'), isDesktop)
