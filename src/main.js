@@ -1,6 +1,6 @@
-import Lenis from '@studio-freight/lenis'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// import Lenis from '@studio-freight/lenis'
+// import { gsap } from 'gsap'
+// import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import $ from 'jquery'
 
 // WINDOW RESIZE LISTENER
@@ -10,18 +10,18 @@ window.addEventListener('resize', () => {
 })
 // ===============
 
-gsap.registerPlugin(ScrollTrigger) // GSAP SETUP
-// LENIS SETUP
-const lenis = new Lenis()
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-requestAnimationFrame(raf)
+// gsap.registerPlugin(ScrollTrigger) // GSAP SETUP
+// // LENIS SETUP
+// const lenis = new Lenis()
+// function raf(time) {
+//   lenis.raf(time)
+//   requestAnimationFrame(raf)
+// }
+// requestAnimationFrame(raf)
 
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000)
-})
+// gsap.ticker.add((time) => {
+//   lenis.raf(time * 1000)
+// })
 
 // ===============
 console.log($('body'), isDesktop)
